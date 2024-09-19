@@ -1,0 +1,106 @@
+DB109 - Bracelet Eva
+DB111 - Bracelet Elara
+DB116 - Bracelet Saskia
+DB29 - Bracelet Esmee
+DB37 - Bracelet Aelia
+DB43 - Bracelet Ophelie
+DB44 - Bracelet Maria
+DB49 - Bracelet Chandra
+DB57 - Bracelet Lea
+DB61 - Bracelet Allegra
+DB89 - Bracelet Cassandra
+DE10 - Boucles d'oreilles Isabella
+DE103 - Boucles d'oreilles Aster
+DE104 - Boucles d'oreilles Violetta
+DE108 - Boucles d'oreilles Seraphine
+DE110 - Boucles d'oreilles Delia
+DE114 - Boucles d'oreilles Roxane
+DE13 - Boucles d'oreilles Armance
+DE18 - Boucles d'oreilles Vega
+DE33 - Boucles d'oreilles Celia
+DE35 - Boucles d'oreilles Bianca
+DE40 - Boucles d'oreilles Elena
+DE45 - Boucles d'oreilles Iris
+DE50 - Boucles d'oreilles Sirius
+DE59 - Boucles d'oreilles Jasmine
+DE62 - Boucles d'oreilles Flora
+DE72 - Boucles d'oreilles Alnitak
+DE75 - Boucles d'oreilles Luna
+DE78 - Boucles d'oreilles Aurelia
+DE83 - Boucles d'oreilles Ludmilla
+DE93 - Boucles d'oreilles Thalia
+DE95 - Boucles d'oreilles Persee
+DE99 - Boucles d'oreilles Elora
+DN100 - Collier Ayla
+DN105 - Collier Aether
+DN112 - Collier Esmeralda
+DN115 - Collier Anne
+DN12 - Collier Elisa
+DN19 - Collier Cynthia
+DN32 - Collier Asteria
+DN36 - Collier Electra
+DN39 - Collier Ariel
+DN47 - Collier Astrid
+DN67 - Collier Irisa
+DN71 - Collier Philomene
+DN81 - Collier Cordelia
+DN84 - Collier Emma
+DP14 - Pendentif Louise
+DP15 - Pendentif Amaris
+DP30 - Pendentif Solene
+DP48 - Pendentif Alma
+DP66 - Pendentif Ines
+DP68 - Pendentif Aphrodite
+DP70 - Pendentif Juliette
+DP73 - Pendentif Lucie
+DP76 - Pendentif Solia
+DP79 - Pendentif Chloe
+DP87 - Pendentif Haydée
+DR101 - Bague Carina
+DR102 - Bague Esmerald
+DR106 - Bague Ismene
+DR107 - Bague Estelle
+DR11 - Bague Tara
+DR16 - Bague Aura
+DR17 - Bague Helene
+DR20 - Bague Serena
+DR21 - Bague Esther
+DR22 - Bague Estrella
+DR23 - Bague Callista
+DR24 - Bague Cassiopee
+DR25 - Bague Stella
+DR26 - Bague Nuria
+DR27 - Bague Auriana
+DR28 - Bague Ornella
+DR31 - Bague Artemis
+DR38 - Bague Isadora
+DR41 - Bague Clara
+DR42 - Bague Céleste
+DR46 - Bague Aruna
+DR5 - Bague Aurore
+DR51 - Bague Diane
+DR52 - Bague Andromede
+DR53 - Bague Aysun
+DR54 - Bague Misia
+DR56 - Bague Alcyone
+DR58 - Bague Berenice
+DR6 - Bague Adhara
+DR60 - Bague Lena
+DR63 - Bague Agnes
+DR64 - Bague Tasmin
+DR65 - Bague Valentine
+DR69 - Bague Ivoire
+DR7 - Bague Angeline
+DR74 - Bague Isthar
+DR8 - Bague Galatée
+DR80 - Bague Eloise
+DR82 - Bague Amara
+DR85 - Bague Mirabilis
+DR86 - Bague Sophia
+DR88 - Bague Novae
+DR9 - Bague Amalia
+DR90 - Bague Camille
+DR91 - Bague Altaïr
+DR92 - Bague Vajra
+DR94 - Bague Mirella
+DR98 - Bague Samara
