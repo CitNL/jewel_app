@@ -17,7 +17,7 @@ def load_trained_model_from_S3():
                              aws_secret_access_key=aws_secret_access_key)
 
     bucket_name = 'ndl-sandbox'
-    jewel_model = 'jewel-classifier/categories.txt'# 'jewel-classifier/jewel_classifier_resnet.h5'
+    jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
     # Temporary local path
     local_path = 'jewel_model.h5'  # Adjust based on your environment #'/tmp/jewel_model.h5'
 
