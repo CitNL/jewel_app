@@ -23,9 +23,9 @@ def load_trained_model_from_S3():
     try:
         #response = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
         s3_client.download_file(bucket_name, jewel_model, local_path)
-        st.write('File found and OKKKKKK!!!!!')
+        #st.write('File found and OKKKKKK!!!!!')
         model = load_model(local_path)
-        st.write('model loaded OKKKKKK!!!!!')
+        st.write('model loaded')
 
     except Exception as e:
         st.error(f"Error: {e}")
@@ -71,12 +71,16 @@ def load_categories():
                 categories = content.split('\n')
                 st.write('Category labels uploaded')
             else:
+                
                 st.error("Failed to load category labels")
+                return None
 
         except Exception as e:
             st.error(f"Error: {e}")
+            return None
+        return categories
 
-load_categories()
+categories=load_categories()
 
 # Define a function to preprocess the uploaded image
 def preprocess_image(image, target_size):
