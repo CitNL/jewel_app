@@ -81,7 +81,7 @@ load_categories()
 # Define a function to preprocess the uploaded image
 def preprocess_image(image, target_size):
     # Resize and convert image to array
-    image = ImageOps.fit(image, target_size, Image.ANTIALIAS)
+    image = ImageOps.fit(image, target_size,Image.Resampling.LANCZOS)
     image = np.asarray(image)
     # Normalize image to [0, 1] range
     image = image.astype(np.float32) / 255.0
