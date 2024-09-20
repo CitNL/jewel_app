@@ -33,12 +33,12 @@ def load_trained_model_from_S3():
     
     return model
 
-if st.button("Load Model"):
-    model = load_trained_model_from_S3()
-    if model:
-        st.write('model loaded')
+# if st.button("Load Model"):
+#     model = load_trained_model_from_S3()
+#     if model:
+#         st.write('model loaded')
 
-
+model = load_trained_model_from_S3()
 
 @st.cache_resource()
 def read_file_from_s3(bucket_name, file_key):
