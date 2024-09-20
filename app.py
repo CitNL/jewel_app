@@ -46,7 +46,7 @@ st.write("Upload an image to classify the jewel.")
 
 if st.button("Load File"):
         bucket_name = 'ndl-sandbox'
-        file_key = 'jewel-classifier/categories.txt'
+        file_key = 'jewel-classifier/categories_test.txt'
         try:
             content = read_file_from_s3(bucket_name, file_key)
             st.text_area("File Content", content, height=400)  # Display the file content
