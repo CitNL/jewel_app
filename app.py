@@ -2,14 +2,26 @@ import streamlit as st
 import numpy as np
 import os
 from PIL import Image, ImageOps
+import boto3
 
 
-# Load your trained model
-# @st.cache(allow_output_mutation=True)
-# def load_trained_model():
-#     model = load_model("jewel_classifier_resnet.h5")
-#     return model
+@st.cache(allow_output_mutation=True)
+def load_trained_model_from_S3():
 
+    s3_client = boto3.client('s3')
+
+    bucket_name = 'ndl-sandbox'
+    jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
+
+    try:
+        model = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
+
+    except Exception as e:
+        print("Error accessing S3:", e)
+        return None
+    return model
+
+model = load_trained_model_from_S3()
 
 # Create a mapping for model predictions
 with open('categories.txt', 'r') as f:
