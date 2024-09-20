@@ -5,10 +5,15 @@ from PIL import Image, ImageOps
 import boto3
 
 
+aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
+aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+
 @st.cache(allow_output_mutation=True)
 def load_trained_model_from_S3():
 
-    s3_client = boto3.client('s3')
+    s3_client = boto3.client('s3', 
+                             aws_access_key_id=aws_access_key_id,
+                             aws_secret_access_key=aws_secret_access_key)
 
     bucket_name = 'ndl-sandbox'
     jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
@@ -22,6 +27,7 @@ def load_trained_model_from_S3():
     return model
 
 model = load_trained_model_from_S3()
+
 
 
 #@st.cache(allow_output_mutation=True)
