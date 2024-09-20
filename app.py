@@ -107,7 +107,7 @@ if uploaded_file is not None:
 
 # Preprocess the image
     processed_image = preprocess_image(image, target_size=(224, 224))  # adjust target_size based on your model's input size
-    
+    st.image(processed_image, caption="Processed Image", use_column_width=True)
     # Make predictions
     predictions = model.predict(processed_image)
     predicted_class = np.argmax(predictions[0])
