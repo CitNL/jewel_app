@@ -4,29 +4,29 @@ import os
 from PIL import Image, ImageOps
 import boto3
 
-
+aws_test = st.secrets["TEST"]
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
 aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
 
-@st.cache(allow_output_mutation=True)
-def load_trained_model_from_S3():
+# @st.cache(allow_output_mutation=True)
+# def load_trained_model_from_S3():
 
-    s3_client = boto3.client('s3', 
-                             aws_access_key_id=aws_access_key_id,
-                             aws_secret_access_key=aws_secret_access_key)
+#     s3_client = boto3.client('s3',
+#                              aws_access_key_id=aws_access_key_id,
+#                              aws_secret_access_key=aws_secret_access_key)
 
-    bucket_name = 'ndl-sandbox'
-    jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
+#     bucket_name = 'ndl-sandbox'
+#     jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
 
-    try:
-        model = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
+#     try:
+#         model = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
 
-    except Exception as e:
-        print("Error accessing S3:", e)
-        return None
-    return model
+#     except Exception as e:
+#         print("Error accessing S3:", e)
+#         return None
+#     return model
 
-model = load_trained_model_from_S3()
+# model = load_trained_model_from_S3()
 
 
 
