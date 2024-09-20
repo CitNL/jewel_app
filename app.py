@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 import boto3
 
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
-aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]#test
 
 # @st.cache(allow_output_mutation=True)
 # def load_trained_model_from_S3():
