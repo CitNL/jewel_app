@@ -19,7 +19,7 @@ def load_trained_model_from_S3():
     bucket_name = 'ndl-sandbox'
     jewel_model = 'jewel-classifier/categories.txt'# 'jewel-classifier/jewel_classifier_resnet.h5'
     # Temporary local path
-    local_path = '/tmp/jewel_model.h5'  # Adjust based on your environment
+    local_path = 'jewel_model.h5'  # Adjust based on your environment #'/tmp/jewel_model.h5'
 
     try:
         s3.download_file(bucket_name, jewel_model, local_path)
