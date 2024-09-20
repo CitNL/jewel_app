@@ -38,6 +38,9 @@ def read_file_from_s3(bucket_name, file_key):
     content=response['Body'].read().decode('utf-8')
     return content
 
+# Streamlit App interface
+st.title("Jewel Classification App")
+st.write("Upload an image to classify the jewel.")
 
 if st.button("Load File"):
         bucket_name = 'ndl-sandbox'
@@ -52,10 +55,8 @@ if st.button("Load File"):
 
     
 
-# Streamlit App interface
-st.title("Jewel Classification App")
-st.write("Upload an image to classify the jewel.")
-st.write(categories[0])
+
+
 
 # File uploader for image input
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
