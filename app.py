@@ -4,7 +4,6 @@ import os
 from PIL import Image, ImageOps
 import boto3
 
-aws_test = st.secrets["TEST"]
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
 aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
 
