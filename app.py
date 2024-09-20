@@ -78,6 +78,17 @@ def load_categories():
 
 load_categories()
 
+# Define a function to preprocess the uploaded image
+def preprocess_image(image, target_size):
+    # Resize and convert image to array
+    image = ImageOps.fit(image, target_size, Image.ANTIALIAS)
+    image = np.asarray(image)
+    # Normalize image to [0, 1] range
+    image = image.astype(np.float32) / 255.0
+    image = np.expand_dims(image, axis=0)  # Add batch dimension
+    return image
+
+
 # Streamlit App interface
 st.title("Jewel Classification App")
 st.write("Upload an image to classify the jewel.")
