@@ -4,11 +4,12 @@ import os
 from PIL import Image, ImageOps
 import boto3
 import tensorflow as tf
+from tensorflow.keras.models import load_model
 
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
 aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
 
-@st.cache(allow_output_mutation=True)
+#@st.cache(allow_output_mutation=True)
 def load_trained_model_from_S3():
 
     s3_client = boto3.client('s3',
@@ -33,7 +34,8 @@ def load_trained_model_from_S3():
 
 if st.button("Load Model"):
     model = load_trained_model_from_S3()
-    st.write('model loaded')
+    if model:
+        st.write('model loaded')
 
 
 
