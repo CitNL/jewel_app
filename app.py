@@ -32,6 +32,7 @@ def load_trained_model_from_S3():
 
 if st.button("Load Model"):
     model = load_trained_model_from_S3()
+    st.write('model loaded')
 
 
 
