@@ -7,25 +7,30 @@ import boto3
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
 aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
 
-# @st.cache(allow_output_mutation=True)
-# def load_trained_model_from_S3():
+@st.cache(allow_output_mutation=True)
+def load_trained_model_from_S3():
 
-#     s3_client = boto3.client('s3',
-#                              aws_access_key_id=aws_access_key_id,
-#                              aws_secret_access_key=aws_secret_access_key)
+    s3_client = boto3.client('s3',
+                             aws_access_key_id=aws_access_key_id,
+                             aws_secret_access_key=aws_secret_access_key)
 
-#     bucket_name = 'ndl-sandbox'
-#     jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
+    bucket_name = 'ndl-sandbox'
+    jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
+    # Temporary local path
+    local_path = '/tmp/jewel_model.h5'  # Adjust based on your environment
 
-#     try:
-#         model = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
+    try:
+        s3.download_file(bucket_name, object_key, local_path)
+        st.write('File found and OKKKKKK!!!!!')
+        model = load_model(local_path)
+        st.write('model loaded OKKKKKK!!!!!')
 
-#     except Exception as e:
-#         print("Error accessing S3:", e)
-#         return None
-#     return model
+    except Exception as e:
+        print("Error accessing S3:", e)
+        return None
+    return model
 
-# model = load_trained_model_from_S3()
+model = load_trained_model_from_S3()
 
 
 
@@ -37,14 +42,14 @@ def read_file_from_s3(bucket_name, file_key):
                              aws_secret_access_key=aws_secret_access_key)
     try:
         response = s3_client.get_object(Bucket=bucket_name, Key=file_key)
-        st.write('File found and OKKKKKK!!!!!')
+        
 
     except Exception as e:
         print("Error accessing S3:", e)
         return None
     
     content=response['Body'].read().decode('utf-8')
-    st.write('File loaded successfully')
+    
     print('file loaded')
     return content
 
