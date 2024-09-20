@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
 aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
 
-@st.cache_ressource()
+@st.cache_resource()
 def load_trained_model_from_S3():
 
     s3_client = boto3.client('s3',
@@ -40,7 +40,7 @@ if st.button("Load Model"):
 
 
 
-@st.cache_ressource()
+@st.cache_resource()
 def read_file_from_s3(bucket_name, file_key):
 
     s3_client = boto3.client('s3',
