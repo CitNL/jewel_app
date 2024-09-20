@@ -23,11 +23,12 @@ def load_trained_model_from_S3():
     jewel_model = 'jewel-classifier/jewel_classifier_resnet.h5'
 
     try:
-        vector_obj = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
+        model = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
 
     except Exception as e:
         print("Error accessing S3:", e)
         return None
+    return model
 
 model = load_trained_model_from_S3()
 
