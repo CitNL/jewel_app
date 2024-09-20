@@ -21,12 +21,14 @@ def load_trained_model_from_S3():
     # Temporary local path
     local_path = 'jewel_model.h5'  # Adjust based on your environment #'/tmp/jewel_model.h5'
 
+    response = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
+    #s3.download_file(bucket_name, jewel_model, local_path)
+    st.write('File found and OKKKKKK!!!!!')
+    model = load_model(response['Body'])#local_path)
+    st.write('model loaded OKKKKKK!!!!!')
+
     try:
-        response = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
-        #s3.download_file(bucket_name, jewel_model, local_path)
-        st.write('File found and OKKKKKK!!!!!')
-        model = load_model(response['Body'])#local_path)
-        st.write('model loaded OKKKKKK!!!!!')
+        1==1
 
     except Exception as e:
         print("Error accessing S3:", e)
