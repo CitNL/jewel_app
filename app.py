@@ -25,7 +25,7 @@ def load_trained_model_from_S3():
         response = s3_client.get_object(Bucket=bucket_name, Key=jewel_model)
         #s3.download_file(bucket_name, jewel_model, local_path)
         st.write('File found and OKKKKKK!!!!!')
-        #model = load_model(local_path)
+        model = load_model(response['Body'])#local_path)
         st.write('model loaded OKKKKKK!!!!!')
 
     except Exception as e:
