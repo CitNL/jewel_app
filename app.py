@@ -30,6 +30,7 @@ def read_file_from_s3(bucket_name, file_key):
     s3_client = boto3.client('s3')
     try:
         response = s3_client.get_object(Bucket=bucket_name, Key=file_key)
+        print('OKKKKKK!!!!!')
 
     except Exception as e:
         print("Error accessing S3:", e)
