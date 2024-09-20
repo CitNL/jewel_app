@@ -21,7 +21,7 @@ def load_trained_model_from_S3():
     local_path = '/tmp/jewel_model.h5'  # Adjust based on your environment
 
     try:
-        s3.download_file(bucket_name, object_key, local_path)
+        s3.download_file(bucket_name, jewel_model, local_path)
         st.write('File found and OKKKKKK!!!!!')
         model = load_model(local_path)
         st.write('model loaded OKKKKKK!!!!!')
