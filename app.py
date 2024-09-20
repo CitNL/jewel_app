@@ -36,6 +36,7 @@ def read_file_from_s3(bucket_name, file_key):
         return None
     
     content=response['Body'].read().decode('utf-8')
+    print('file loaded')
     return content
 
 # Streamlit App interface
