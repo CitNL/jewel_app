@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 import boto3
 
 aws_access_key_id = st.secrets["AWS_ACCESS_KEY_ID"]
-aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]#test
+aws_secret_access_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
 
 # @st.cache(allow_output_mutation=True)
 # def load_trained_model_from_S3():
@@ -52,7 +52,7 @@ st.write("Upload an image to classify the jewel.")
 
 if st.button("Load File"):
         bucket_name = 'ndl-sandbox'
-        file_key = 'jewel-classifier/categories_test.txt'
+        file_key = 'jewel-classifier/categories.txt'
         try:
             content = read_file_from_s3(bucket_name, file_key)
             if content is not None:
@@ -61,7 +61,7 @@ if st.button("Load File"):
             
                 # Split into categories if content exists
                 categories = content.split('\n')
-                st.write(categories)  # Show the first 10 items from the list
+                st.write(categories)
             else:
                 st.error("Failed to load content from the file.")
 
