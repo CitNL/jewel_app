@@ -48,7 +48,8 @@ if st.button("Load File"):
         try:
             content = read_file_from_s3(bucket_name, file_key)
             st.text_area("File Content", content, height=400)  # Display the file content
-            #categories = content.split('\n')
+            categories = content.split('\n')
+            st.write(categories[:10])
         except Exception as e:
             st.error(f"Error: {e}")
 
